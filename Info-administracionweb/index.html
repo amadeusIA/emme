@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Codec&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+
+  <title>Manual Administrativo</title>
+
+
+  <style>
+    body {
+      font-family: "Lexend Deca", serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'codec-bold';
+      src: url(codec/Codec-Cold-Bold-trial.ttf) format(ttf);
+      font-weight: 100;
+    }
+
+    @font-face {
+      font-family: 'codec-regular';
+      src: url(codec/Codec-Cold-Regular-trial.ttf);
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'codec-extra-bold';
+      src: url(codec/Codec-Cold-ExtraBold-trial.ttf);
+    }
+
+    .text-title {
+      letter-spacing: -5px;
+      line-height: 60px;
+      font-family: 'codec-extra-bold';
+      font-size: 4em;
+    }
+
+    .text1 {
+      font-family: 'codec-bold';
+    }
+
+    .text-article {
+
+      font-weight: 300;
+    }
+
+    .title {
+      font-family: 'codec-extra-bold';
+      font-size: 2em;
+      letter-spacing: 0px;
+    }
+
+
+    /* Estilos personalizados para el submenú que se abre hacia la derecha */
+    .dropend .dropdown-menu {
+      right: 100%;
+      /* Desplaza el menú hacia la derecha */
+      top: 0;
+      /* Alinea el menú con la parte superior del elemento padre */
+      margin-right: 0.125rem;
+      /* Ajusta el margen para que no se pegue */
+    }
+
+    /* Mostrar el submenú derecho al hacer hover */
+    .dropend:hover .dropdown-menu {
+      display: block;
+
+    }
+  </style>
+
+  <!-- JavaScript personalizado para manejar el hover solo en el submenú derecho -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Selecciona el submenú derecho
+      const submenuDerecha = document.querySelector(".dropend");
+
+      // Selecciona el menú desplegable asociado
+      const dropdownMenu = submenuDerecha.querySelector(".dropdown-menu");
+
+      // Mostrar el submenú al hacer hover
+      submenuDerecha.addEventListener("mouseenter", () => {
+        dropdownMenu.classList.add("show");
+      });
+
+      // Ocultar el submenú al dejar de hacer hover
+      submenuDerecha.addEventListener("mouseleave", () => {
+        dropdownMenu.classList.remove("show");
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="imagenes/emme.png" width="20%" class="img-fluid" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link"
+              href="https://www.google.com/maps/d/u/0/viewer?mid=1Tjwmfe69bpaVB7ilIteE-ifjL6iFkgg&ll=21.020348299999988%2C-89.6353912&z=8">Estaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://172.16.0.7:8010/glpi/index.php?noAUTO=1">GLPI</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Conecta</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://conecta.concierge.khorplus.com/concierge">Inicio conecta</a>
+              </li>
+              <li><a class="dropdown-item" href="ayuda.html">Tutoriales</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Sistema de
+              Gesti&oacute;n</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="http://172.16.0.8/sgc/">SGC</a></li>
+              <li><a class="dropdown-item" href="http://172.16.0.8/sgc/recursos.php">Recursos</a></li>
+            </ul>
+          </li>
+          <!-- Primer dropdown (se abre hacia abajo) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Recursos
+              administrativos</a>
+            <ul class="dropdown-menu">
+              <!-- Submenú que se despliega hacia la derecha -->
+              <li class="dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" role="button">Caja de ahorro</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="informacion/Caja de Ahorro 2025.pdf">Reglamento caja <br> de
+                      ahorro</a></li>
+                  <li><a class="dropdown-item" href="informacion/Formato de inscripción 2025.pdf">Formato de <br>
+                      inscripción</a></li>
+                  <li><a class="dropdown-item" href="informacion/Formato préstamo 2025.pdf">Formato de <br>
+                      Pr&eacute;stamo</a></li>
+                </ul>
+              </li>
+              <!-- Submenú que se despliega hacia la izquierda -->
+              <li><a class="dropdown-item" href="informacion/SOLICITUD DE PAGO(Formato).xlsx">Formato de solicitud de
+                  <br> pago</a></li>
+              <li class="dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" role="button">Vi&aacute;ticos</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="informacion/Viáticos 2025.pdf">Politica de vi&aacute;ticos</a>
+                  </li>
+                  <li><a class="dropdown-item" href="informacion/VIATICOS Solicitud de efectivo.xls">Formato de
+                      solicitud <br> de vi&aacute;ticos</a></li>
+
+                </ul>
+              </li>
+
+              <li><a class="dropdown-item" href="http://172.16.0.8/ensi/login.php">UEN'S y UEA'S</a></li>
+              <li><a class="dropdown-item"
+                  href="http://172.16.0.7:3000/public/dashboard/9a92c796-7631-491e-a4d6-b04cfaeaca6f?departamento=&estacion=yucatan">Extensiones</a>
+              </li>
+              <li class="dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" role="button">Beneficios del colaborador</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="informacion/1 Beneficios Megasur copia-fusionado.pdf">Centro
+                      M&eacute;dico peninsular</a></li>
+                  <li><a class="dropdown-item" href="imagenes/O0g9t6UQPUt3lXJx.png">Beneficios Megacardclub</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="imagenes/imagenes institucionales.rar">Logos institucionales</a></li>
+            </ul>
+          </li>
+
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid background-box d-flex align-items-center" style="height: 77vh;">
+    <!-- Alto personalizado -->
+    <div class="row justify-content-center w-100">
+      <div class="col-sm-5 col-md-5 col-lg-5 p-5 text-box1 d-flex align-items-center">
+        <div>
+          <br> <br>
+          <h1 class="" style="color: white; font-weight: 600; font-size: 70px; line-height: 1;">Manual Administrativo
+          </h1>
+          <article>
+            <p class="" style="color: #7dc8fb;">¿QUÉ ES Y PARA QUÉ FUNCIONA?</p>
+            <p class="text-article" style="color: white; margin-bottom: 2em;">
+              Es una herramienta informativa que ayuda al colaborador a identificarse dentro de emme corporativo,
+              reconocerse como una pieza clave dentro de los procesos establecidos y a comunicarse de manera efectiva
+              con los demás en la organización.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="col-sm-5 col-md-5 col-lg-5 p-5 text-box1 d-flex justify-content-center align-items-center">
+        <img src="imagenes/Manual Administrativo.jpg" class="img-fluid rounded" alt="Manual Administrativo">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="container-fluid border-bottom" style="background-color: rgb(228, 229, 236);">
+    <div class="row justify-content-center align-items-center py-5">
+      <!-- Columna de la imagen -->
+      <div class="col-sm-5 p-5 d-flex justify-content-center align-items-center">
+        <img src="imagenes/Misión - Visión.jpg" class="rounded img-fluid" alt="Misión y Visión">
+      </div>
+
+      <!-- Columna del texto -->
+      <div class="col-sm-5 p-5">
+        <h1 class="" style="color: #042484; font-weight: 600; font-size:70px;">Misión</h1>
+        <article>
+          <p class="text-article">
+            Satisfacer integralmente la necesidad de combustible de nuestros clientes, a través de la excelencia en
+            nuestros procesos, productos y servicios, brindando oportunidades de mejora y desarrollo a todos los que
+            conformamos la organización.
+          </p>
+        </article>
+        <br>
+        <h1 class="" style="color: #042484; font-weight: 600; font-size:70px;">Visión</h1>
+        <article>
+          <p class="text-article">
+            Ser el grupo gasolinero líder, reconocido por brindar los más altos niveles de satisfacción a los clientes,
+            en constante crecimiento y sólido desarrollo.
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" style="background-color:rgb(228,229,236);">
+    <div class="row">
+      <h1 style="text-align: center;color:#042484; font-weight: 600; font-size: 70px;" class="">Nuestros Valores</h1>
+      <div class="slider">
+        <div class="slider-track">
+          <div class="slide">
+            <figure> <img src="imagenes/TrabajoEnEquipo.png" width="100" alt="">
+              <figcaption></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure><img src="imagenes/ExcelenciaEnImagen.png" width="100" alt="" style="text-align: center;">
+              <figcaption></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/Compromiso.png" width="122" alt="">
+              <figcaption></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/MejoraContinua.png" width="100" alt="">
+              <figcaption></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/Rapidez.png" width="100" alt="">
+              <figcaption style="margin-left:20px ;"></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/Eficiencia.png" width="100" alt="">
+              <figcaption style="margin-left:20px ;"></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/Honestidad.png" width="110" alt="">
+              <figcaption style="margin-left:15px ;"></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/PasiónPorServir.png" width="100" alt="">
+              <figcaption style="margin-right:20px ;"></figcaption>
+            </figure>
+          </div>
+
+          <div class="slide">
+            <figure> <img src="imagenes/TrabajoEnEquipo.png" width="100" alt="">
+              </figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure><img src="imagenes/ExcelenciaEnImagen.png" width="100" alt="" style="text-align: center;">
+              <figcaption></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/Compromiso.png" width="122" alt="">
+              <figcaption></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/MejoraContinua.png" width="100" alt="">
+              <figcaption></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/Rapidez.png" width="100" alt="">
+              <figcaption style="margin-left:20px ;"></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/Eficiencia.png" width="100" alt="">
+              <figcaption style="margin-left:20px ;"></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/Honestidad.png" width="110" alt="">
+              <figcaption style="margin-left:15px ;"></figcaption>
+            </figure>
+          </div>
+          <div class="slide">
+            <figure> <img src="imagenes/PasiónPorServir.png" width="100" alt="">
+              <figcaption style="margin-right:20px ;"></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </div>
+  </div>
+  </div>
+
+  <div class="container-fluid" style="background-color:rgb(228,229,236);">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-lg-5 col-md-6 col-sm-12 p-5">
+        <h1 class="" style="color:#042484; font-weight: 600; font-size: 70px; line-height: 1;">Política de Calidad</h1>
+        <article>
+          <p class="text-article">Nos comprometemos a brindar a nuestros clientes un servicio de calidad, a través de la
+            mejora continua de nuestros procesos, de personal altamente calificado y del cumplimiento de la normatividad
+            aplicable vigente, apoyándonos en nuestro sistema de gestión de la calidad basado en la norma ISO <span
+              style="font-family: Arial, Helvetica, sans-serif">9001:2015</span></p>
+        </article>
+
+        <h1 style="color:#042484; font-weight: 600; font-size: 70px; line-height: 1;">Objetivo de Calidad</h1>
+        <article>
+          <p>
+          <ul class="text-article">
+            <li>Lograr el cumplimiento de utilidades de UEN'S.</li>
+            <li>Lograr las experiencias agradables para los clientes.</li>
+            <li>Mantener la certificación ISO 9001:2015</li>
+            <li>Detectar nuevos productos y tecnología para dar el mejor servicio.</li>
+            <li>Consolidar una cultura de mejora continua en la organización.</li>
+            <li>Medir e incrementar la satisfacción laboral.</li>
+          </ul>
+          </p>
+        </article>
+      </div>
+      <div class="col-lg-5 col-md-6 col-sm-12 p-3 d-flex justify-content-center align-items-center">
+        <img src="imagenes/Politica de Calidad.jpg" class="img-fluid rounded" alt="Política de Calidad"
+          style="max-width: 100%; height: auto;">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" style="background-color:rgb(228,229,236);">
+    <br>
+    <h1 style="text-align: center;color:#042484; font-weight: 600; font-size: 70px;" class="">La gasolinera de los
+      sueños</h1>
+    <div class="row justify-content-center align-items-start"> <!-- Cambiado a align-items-start -->
+
+      <!-- Columna de la imagen -->
+      <div class="col-sm-5 col-md-5 col-lg-5 p-3 d-flex align-items-center"> <!-- Flexbox para alinear la imagen -->
+        <img src="imagenes/gasolineramega.png" class="rounded img-fluid" alt="" style="max-height: 100%; width: auto;">
+      </div>
+
+      <!-- Columna del texto -->
+      <div class="col-sm-5 col-md-5 col-lg-5 p-5 d-flex align-items-center"> <!-- Flexbox para alinear el texto -->
+        <article>
+          <p class="text-article">
+            Había una vez una pequeña gasolinera en el estado de Yucatán en crecimiento. Esta gasolinera no era como las
+            demás; tenía una filosofía organizacional que la hacía especial. Su misión era satisfacer integralmente la
+            necesidad de combustible de sus clientes, a través de la excelencia en sus procesos, productos y servicios,
+            brindando oportunidades de mejora y desarrollo a todos los que conformaban la organización.
+            <br>
+            El dueño de la gasolinera, Don Mario, tenía una visión muy clara: quería que su grupo gasolinero fuera
+            líder, reconocido por brindar los más altos niveles de satisfacción a los clientes, en constante crecimiento
+            y sólido desarrollo. Para lograrlo, implementó una política de calidad que comprometía a todos a brindar un
+            servicio de calidad, mejorando continuamente sus procesos, formando a su personal altamente calificado y
+            cumpliendo con todas las normativas vigentes. Su sistema de gestión de la calidad se basaba en la norma ISO
+            9001:2015.
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Ver mas ...
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">La gasolinera de los sueños</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <article class="text-article">
+                    <span> Los valores que guiaban a la gasolinera eran el trabajo en equipo, la excelencia en imagen,
+                      el compromiso, la mejora continua, la rapidez, la eficiencia, la honestidad y la pasión por
+                      servir.
+                      Un día, mientras Don Mario revisaba los resultados de la gasolinera, notó algo sorprendente. Los
+                      clientes no solo estaban satisfechos, sino que comenzaban a recomendar la gasolinera a amigos y
+                      familiares. Los empleados, motivados por el entorno de trabajo positivo y el compromiso con la
+                      excelencia, trabajaban juntos como una familia, resolviendo problemas y proponiendo mejoras
+                      constantemente.
+
+                      Y así, la gasolinera de los sueños continúa creciendo y prosperando, siendo un ejemplo de cómo una
+                      filosofía organizacional bien definida y el ejercicio de buenas prácticas puede llevar al éxito y
+                      la satisfacción tanto de clientes como de empleados. Colorín colorado, este cuento continuará.
+                    </span>
+                  </article>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal -->
+          </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid p-3" style="background-color:rgb(228,229,236);">
+    <h1 class="" style="text-align: center; color:#042484; font-weight: 600; font-size: 70px;">Comit&eacute; de Calidad
+    </h1>
+    <h2 class="" style="text-align: center; color:#042484;">Temas a tratar</h2>
+    <div class="row">
+      <div class="col-sm-5 p-3">
+
+
+      </div>
+    </div>
+
+
+
+
+    <div class="container text-center text-article ">
+      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 justify-content-center">
+        <div class="col">
+          <div class="icon-box p-4 border rounded-2">
+            <p>
+              <img src="imagenes/Recurso 1@300x.png" class="img-icon" width="90" alt="">
+              <br> <br>
+              Presentaci&oacute;n de avances de proyectos asignados a equipos de mejora.
+            </p>
+          </div>
+
+        </div>
+        <div class="col">
+          <div class=" icon-box p-4 border rounded-2">
+            <img src="imagenes/Recurso 2@300x.png" width="90" class="img-icon" alt="">
+            <p class="">
+              <br>
+              Resultados de ventas y an&aacute;lisis de planes de acci&oacute;n (reuni&oacute;n comercial).
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-4 border rounded-2 icon-box">
+            <img src="imagenes/Recurso 3@300x.png" class="img-icon" width="90" alt="">
+            <br> <br>
+            <p class="">Resultados de indicadores estrat&eacute;gicos.</p>
+          </div>
+        </div>
+        <div class="col ">
+          <div class="p-4 border rounded-2 icon-box"> <img src="imagenes/Recurso 4@300x.png" class="img-icon" width="90"
+              alt=""> <br> <br>
+            <p class="text-article">Revisi&oacute;n de pendientes en general.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="container-fluid">
+    <br>
+    <h1 class="" style="font-weight: 600; font-size: 70px; text-align: center; color:#042484;">Integrantes</h1>
+
+    <div class="wrapper">
+      <div class="image">
+        <img src="imagenes/director administrativo.png" alt="">
+        <div class="content">
+          <h1>Mario Medina</h1>
+          <p class="">Director Administrativo</p>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="imagenes/director operativo.png" alt="">
+        <div class="content">
+          <h1>Rodrigo <br> Medina</h1>
+          <p class="">Director Operativo</p>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src="imagenes/gerente operaciones.png" alt="">
+        <div class="content">
+          <h1>Josu&eacute; Jimenez</h1>
+          <p class="">
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+              Gerente Operaciones
+            </button>
+          </p>
+        </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-article" id="staticBackdropLabel">Operaciones</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="text-article">
+                  <b class="">Objetivo</b> <br>
+                  Supervisar y dirigir al área de operaciones, dirigiendo y tomando decisiones para lograr objetivos, y
+                  el buen funcionamiento de las estaciones de servicio.
+                  <br> <b class="">contacto</b>
+                  <br>
+                  L.A.E. Josué Jiménez / Gerente de Operaciones <br>
+                  Tel: 9-20-25-85 Ext. 601
+                  <br>
+                  josuejimenez@gmegasur.com.mx <br>
+
+
+                  <br>
+
+                  <img src="ORGANIGRAMAS FINALES/Operaciones.jpg" class="img-fluid img-thumbnail"
+                    onclick="openFullscreen(this)">
+
+                <div class="fullscreen-container" id="fullscreencontainer">
+                  <span class="close-btn" onclick="closeFullscreen()">✖</span>
+                  <img id="fullscreenImage" src="" alt="">
+
+                </div>
+                </p>
+
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+
+      <div class="image">
+        <img src="imagenes/gerente mercadotecnia.png" alt="">
+        <div class="content">
+          <h1>Octavio Soto</h1>
+          <p class=""> <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop2">
+              Gerente Mercadotecnia
+            </button></p>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-article" id="staticBackdropLabel">Mercadotecnia</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-article">
+
+              <b class="">Objetivo</b> <br>
+              <p class="">
+                Analizar, desarrollar, planificar y gestionar estratégicos publicitarios y campañas de publicidad, con
+                base al presupuesto y plan anual autorizado, siendo el responsable del apego y cumplimiento en tiempo y
+                forma; por medio de despliegue de estrategias de marketing en coordinación con las áreas comerciales y
+                operativas de división combustible, división mayorista y división otros negocios, buscando la
+                rentabilidad de las diferentes marcas, para cumplir con los objetivos comerciales del grupo de forma
+                conjunta.
+              </p>
+              <b class="">Contacto</b>
+              <p class=" ">Lic. Octavio Soto Cachón / Gerente de Mercadotecnia <br>
+                Tel: 9-20-25-85 Ext. 602 <br>
+                octaviosoto@gmegasur.com.mx
+                <br><br>
+
+                <img src="ORGANIGRAMAS FINALES/Mercadotecnia.jpg" class="img-fluid img-thumbnail"
+                  onclick="openFullscreen1(this)">
+              <div class="fullscreen-container" id="fullscreencontainer1">
+                <span class="close-btn" onclick="closeFullscreen1()">✖</span>
+                <img id="fullscreenImage1" src="" alt="">
+
+              </div>
+              <script>
+                function openFullscreen1(img) {
+                  let fullscreenImage = document.getElementById("fullscreenImage1");
+                  let fullscreencontainer = document.getElementById("fullscreencontainer1");
+
+                  fullscreenImage.src = img.src;
+                  fullscreencontainer.style.display = "flex";
+                  fullscreencontainer.classList.add("active");
+
+                }
+
+                function closeFullscreen1() {
+
+                  let fullscreencontainer = document.getElementById("fullscreencontainer1");
+                  fullscreencontainer.style.display = "none";
+                  fullscreencontainer.classList.remove("active");
+                }
+              </script>
+
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------>
+
+
+    </div>
+    <div class="wrapper">
+
+
+      <div class="image">
+        <img src="imagenes/Gerente Contabilidad.png" alt="">
+        <div class="content">
+          <h1>Eric Ruiz</h1>
+          <p class=""><!-- Button trigger modal -->
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+              Gerente Contabilidad
+            </button>
+          </p>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Contabilidad</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-article">
+                <b>Objetivo</b>
+                <p>Administrar, apoyar, asesorar, calcular, revisar, proponer y autorizar actividades de los
+                  colaboradores del departamento, y opciones fiscales, contables y financieros, a través de la
+                  administración y distribución de objetivos, así como por medio de la revisión de los reportes
+                  financieros y fiscales, declaraciones de impuestos y papeles de trabajo correspondientes.
+                  Para obtener y mantener financiamiento, y la adecuada toma de decisiones fiscales, contables,
+                  financieras y administrativas del corporativo.
+                </p>
+                <p><b>Contacto</b> <br>
+                  CP. Erick Armando Ruiz Paes / Gerente de Contabilidad y Finanzas <br>
+                  Tel: 9-20-25-85 Ext. 415 <br>
+                  erik.ruiz@gmegasur.com.mx <br>
+
+                  <br>
+
+                  <img src="ORGANIGRAMAS FINALES/Organigrama CONTABILIDAD Y FINANZAS.jpg"
+                    class="img-fluid img-thumbnail" onclick="openFullscreen2(this)">
+                <div class="fullscreen-container" id="fullscreencontainer2">
+                  <span class="close-btn" onclick="closeFullscreen2()">✖</span>
+                  <img id="fullscreenImage2" src="" alt="">
+
+                </div>
+                <script>
+                  function openFullscreen2(img) {
+                    let fullscreenImage = document.getElementById("fullscreenImage2");
+                    let fullscreencontainer = document.getElementById("fullscreencontainer2");
+
+                    fullscreenImage.src = img.src;
+                    fullscreencontainer.style.display = "flex";
+                    fullscreencontainer.classList.add("active");
+
+                  }
+
+                  function closeFullscreen2() {
+
+                    let fullscreencontainer = document.getElementById("fullscreencontainer2");
+                    fullscreencontainer.style.display = "none";
+                    fullscreencontainer.classList.remove("active");
+                  }
+                </script>
+
+
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="image">
+        <img src="imagenes/gerente comercial.png" alt="">
+        <div class="content">
+          <h1>Antonio <br> Liz&aacute;rraga</h1>
+          <p class=""><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop4">
+              Gerente Comercial</button></p>
+          </button></p>
+
+
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-article" id="staticBackdropLabel">Comercial</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-article">
+                <b>Objetivo</b>
+                <p>Planificar, organizar, y dirigir todas las gestiones comerciales y de mercado de la división
+                  combustibles con apego al presupuesto.
+                  Visita a clientes, negociación con clientes por volúmenes de compra, gestión de crédito para los
+                  clientes, presentación de planes comerciales para desarrollar a los clientes, identificación de
+                  clientes potenciales de la competencia, desarrollo de mercado, participación en licitaciones
+                  federales, estatales y municipales, desarrollo de relaciones con los municipios y dependencias,
+                  identificar áreas de oportunidad comerciales, visita a estaciones para contribuir con el desarrollo de
+                  clientes y ventas.
+                </p>
+                <b>Contacto</b>
+                <p>C.P. Antonio Lizárraga Riera / Gerente Comercial <br>
+                  Tel: 9-20-25-85 Ext. 460 <br>
+                  antoniolizarraga@gmegasur.com.mx
+
+                </p>
+
+
+                <img src="ORGANIGRAMAS FINALES/Organigrama COMERCIAL.jpg" class="img-fluid img-thumbnail"
+                  onclick="openFullscreen3(this)">
+                <div class="fullscreen-container" id="fullscreencontainer3">
+                  <span class="close-btn" onclick="closeFullscreen3()">✖</span>
+                  <img id="fullscreenImage3" src="" alt="">
+
+                </div>
+                <script>
+                  function openFullscreen3(img) {
+                    let fullscreenImage = document.getElementById("fullscreenImage3");
+                    let fullscreencontainer = document.getElementById("fullscreencontainer3");
+
+                    fullscreenImage.src = img.src;
+                    fullscreencontainer.style.display = "flex";
+                    fullscreencontainer.classList.add("active");
+
+                  }
+
+                  function closeFullscreen3() {
+
+                    let fullscreencontainer = document.getElementById("fullscreencontainer3");
+                    fullscreencontainer.style.display = "none";
+                    fullscreencontainer.classList.remove("active");
+                  }
+                </script>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!----------------------------------------------------------------------------->
+
+      </div>
+      <div class="image">
+        <img src="imagenes/gerente calidad.png" alt="">
+        <div class="content">
+          <h1>Pamela Ben&iacute;tez </h1>
+          <p class=""><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop5">
+              Gerente de Calidad <br>y Mejora Continua
+            </button></p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-article" id="staticBackdropLabel">Calidad y Mejora Continua</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-article">
+                <p>
+                  <b>Objetivo</b>
+
+                <ul>
+                  <li>Planificar, desarrollar y coordinar los mecanismos adecuados de los SGC y proyectos de mejora de
+                    las diversas empresas que cuentan con la certificación ISO 9001:2015 para el aseguramiento de la
+                    calidad de los procesos.</li>
+                  <li>Verificar el seguimiento del nivel de satisfacción del servicio para el logro de los objetivos y
+                    rentabilidad de las empresas a su cargo.</li>
+                </ul>
+                </p>
+                <p> <b>Contacto</b> <br>
+                  Ing. Pamela Crystel Benítez Mendoza / Gerente de Calidad y Mejora Continua <br>
+                  Tel: 9-20-25-85 Ext. 240 <br>
+                  pamelabenitez@gmegasur.com.mx
+                </p>
+                <img src="ORGANIGRAMAS FINALES/Organigrama CALIDAD.jpg" class="img-fluid img-thumbnail"
+                  onclick="openFullscreen4(this)">
+                <div class="fullscreen-container" id="fullscreencontainer4">
+                  <span class="close-btn" onclick="closeFullscreen4()">✖</span>
+                  <img id="fullscreenImage4" src="" alt="">
+
+                </div>
+                <script>
+                  function openFullscreen4(img) {
+                    let fullscreenImage = document.getElementById("fullscreenImage4");
+                    let fullscreencontainer = document.getElementById("fullscreencontainer4");
+
+                    fullscreenImage.src = img.src;
+                    fullscreencontainer.style.display = "flex";
+                    fullscreencontainer.classList.add("active");
+
+                  }
+
+                  function closeFullscreen4() {
+
+                    let fullscreencontainer = document.getElementById("fullscreencontainer4");
+                    fullscreencontainer.style.display = "none";
+                    fullscreencontainer.classList.remove("active");
+                  }
+                </script>
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <div class="image">
+        <img src="imagenes/gerente contraloria.png" alt="">
+        <div class="content">
+          <h1>&Aacute;lvaro Flores</h1>
+          <p class=""><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop6">
+              Gerente Contraloria
+            </button></p>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-article " id="staticBackdropLabel">Contraloria</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-article ">
+              <p><b>Objetivo</b> <br>
+                Garantizar la evaluación de los procesos y procedimientos operativos y administrativos mediante un
+                programa de auditorías internas, con el fin de proteger los activos de la empresa y fortalecer la toma
+                de decisiones estratégicas para la mejora continua.</p>
+
+              <p>
+                <b>Contacto</b> <br>
+                CP. Álvaro Flores Góngora / Contralor Corporativo <br>
+                Tel: 9-20-25-85 Ext. 442 <br>
+                alvaroflores@gmegasur.com.mx
+
+              </p>
+
+              <img src="ORGANIGRAMAS FINALES/Organigrama CONTRALORÍA.jpg" class="img-fluid img-thumbnail"
+                onclick="openFullscreen5(this)">
+              <div class="fullscreen-container" id="fullscreencontainer5">
+                <span class="close-btn" onclick="closeFullscreen5()">✖</span>
+                <img id="fullscreenImage5" src="" alt="">
+
+              </div>
+              <script>
+                function openFullscreen5(img) {
+                  let fullscreenImage = document.getElementById("fullscreenImage5");
+                  let fullscreencontainer = document.getElementById("fullscreencontainer5");
+
+                  fullscreenImage.src = img.src;
+                  fullscreencontainer.style.display = "flex";
+                  fullscreencontainer.classList.add("active");
+
+                }
+
+                function closeFullscreen5() {
+
+                  let fullscreencontainer = document.getElementById("fullscreencontainer5");
+                  fullscreencontainer.style.display = "none";
+                  fullscreencontainer.classList.remove("active");
+                }
+              </script>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-------------------------------------------------------------------------------->
+
+
+    </div>
+    <div class="wrapper">
+
+
+      <div class="image">
+        <img src="imagenes/gerente RH.png" alt="">
+        <div class="content">
+          <h1>Gustavo Cetina</h1>
+          <p class=""><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop7">
+              Gerente Recursos Humanos
+            </button></p>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop7" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-article" id="staticBackdropLabel">Recursos Humanos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-article">
+                <p><b>Objetivo</b> <br>
+                  Administración y gestión del capital humano de la organización, manteniendo un clima laboral
+                  &oacute;ptimo, relaciones adecuadas con personal sindicalizado y no sindicalizado, desarrollando las
+                  habilidades y competencias del personal, atraer, retener, y desarrollar talento, para contribuir a
+                  alcanzar los objetivos de cada unidad de negocio del grupo.</p>
+
+                <p>
+                  <b>Contacto</b> <br>
+                  Mtro. Gustavo Cetina Cordero / Gerente de Recursos Humanos <br>
+                  Tel: 9-20-25-85 Ext. 206 <br>
+                  gustavocetina@gmegasur.com.mx
+
+                </p>
+                <img src="ORGANIGRAMAS FINALES/RecursosHumanos.jpg" class="img-fluid img-thumbnail"
+                  onclick="openFullscreen6(this)">
+                <div class="fullscreen-container" id="fullscreencontainer6">
+                  <span class="close-btn" onclick="closeFullscreen6()">✖</span>
+                  <img id="fullscreenImage6" src="" alt="">
+
+                </div>
+                <script>
+                  function openFullscreen6(img) {
+                    let fullscreenImage = document.getElementById("fullscreenImage6");
+                    let fullscreencontainer = document.getElementById("fullscreencontainer6");
+
+                    fullscreenImage.src = img.src;
+                    fullscreencontainer.style.display = "flex";
+                    fullscreencontainer.classList.add("active");
+
+                  }
+
+                  function closeFullscreen6() {
+
+                    let fullscreencontainer = document.getElementById("fullscreencontainer6");
+                    fullscreencontainer.style.display = "none";
+                    fullscreencontainer.classList.remove("active");
+                  }
+                </script>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+      </div>
+
+      <div class="image">
+        <img src="imagenes/gerente DO.png" alt="">
+        <div class="content">
+          <h1>Jacel Salinas </h1>
+          <p class=""><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop8">
+              Gerente Desarrollo <br> Organizacional
+            </button></p>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop8" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-article" id="staticBackdropLabel">Desarrollo Organizacional</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-article">
+                <p><b>Objetivo</b> <br>
+                  Desarrollar, implementar y administrar las estrategias enfocadas al desarrollo de talento en el grupo
+                  y a la satisfacción de los empleados. Por medio de la gestión de diferentes modelos de trabajo que
+                  apoyen el desempeño organizacional de los líderes y de sus equipos de trabajo, a fin de ser un socio
+                  estratégico que contribuya a alcanzar los objetivos organizacionales en capital humano.</p>
+                <b>Contacto</b> <br>
+                <p>
+                  Mtra. Jacel Salinas Blanco / Gerente de Desarrollo Organizacional <br>
+                  Tel: 9-20-25-85 Ext. 210 <br>
+                  jacelsalinas@gmegasur.com.mx
+
+
+                </p>
+                <img src="ORGANIGRAMAS FINALES/Organigrama Desarrollo Organizacional.jpg"
+                  class="img-fluid img-thumbnail" onclick="openFullscreen7(this)">
+                <div class="fullscreen-container" id="fullscreencontainer7">
+                  <span class="close-btn" onclick="closeFullscreen7()">✖</span>
+                  <img id="fullscreenImage7" src="" alt="">
+
+                </div>
+                <script>
+                  function openFullscreen7(img) {
+                    let fullscreenImage = document.getElementById("fullscreenImage7");
+                    let fullscreencontainer = document.getElementById("fullscreencontainer7");
+
+                    fullscreenImage.src = img.src;
+                    fullscreencontainer.style.display = "flex";
+                    fullscreencontainer.classList.add("active");
+
+                  }
+
+                  function closeFullscreen7() {
+
+                    let fullscreencontainer = document.getElementById("fullscreencontainer7");
+                    fullscreencontainer.style.display = "none";
+                    fullscreencontainer.classList.remove("active");
+                  }
+                </script>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="image">
+        <img src="imagenes/Gerente administracion.png" alt="">
+        <div class="content">
+          <h1>Rosario Garces</h1>
+          <p class=""><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop9">
+              Gerente Administraci&oacute;n
+            </button></p>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Administraci&oacute;n</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-article">
+                <p><b>Objetivo</b> <br>
+                  Vigilar y coordinar que la administración de los recursos financieros se ejerza de acuerdo a las
+                  políticas de la empresa, controlando y supervisando las áreas relacionadas con la administración
+                  financiera de la empresa, para hacer más eficiente el aprovechamiento de los recursos financieros.</p>
+                <b>Contacto</b> <br>
+                <p>
+                  Mtra. Rosario Garcés Briceño / Gerente de Administración <br>
+                  Tel: 9-20-25-85 Ext. 111 <br>
+                  rosariogarces@gmegasur.com.mx
+
+
+
+                </p>
+                <img src="ORGANIGRAMAS FINALES/Organigrama Administraciขn.jpg" class="img-fluid img-thumbnail"
+                  onclick="openFullscreen8(this)">
+                <div class="fullscreen-container" id="fullscreencontainer8">
+                  <span class="close-btn" onclick="closeFullscreen8()">✖</span>
+                  <img id="fullscreenImage8" src="" alt="">
+
+                </div>
+                <script>
+                  function openFullscreen8(img) {
+                    let fullscreenImage = document.getElementById("fullscreenImage8");
+                    let fullscreencontainer = document.getElementById("fullscreencontainer8");
+
+                    fullscreenImage.src = img.src;
+                    fullscreencontainer.style.display = "flex";
+                    fullscreencontainer.classList.add("active");
+
+                  }
+
+                  function closeFullscreen8() {
+
+                    let fullscreencontainer = document.getElementById("fullscreencontainer8");
+                    fullscreencontainer.style.display = "none";
+                    fullscreencontainer.classList.remove("active");
+                  }
+                </script>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="image">
+        <img src="imagenes/Gerente Quintana Roo.png" alt="">
+        <div class="content">
+          <h1>Paola S&aacute;nchez</h1>
+          <p class=""><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop10">
+              Gerente Administraci&oacute;n <br> Quintana Roo
+            </button></p>
+        </div>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop10" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-article" id="staticBackdropLabel">Administraci&oacute;n Quintana Roo</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-article">
+              <p><b>Objetivo</b> <br>
+                Vigilar y coordinar que la administración de los recursos financieros se ejerza de acuerdo a las
+                políticas de la empresa, controlando y supervisando las áreas relacionadas con la administración
+                financiera de la empresa, para hacer más eficiente el aprovechamiento de los recursos financieros.</p>
+              <b>Contacto</b> <br>
+              <p>
+                L.A.E. Paola Sánchez Manrique / Gerente Administración Quintana Roo <br>
+                Tel: 9-20-25-85 Ext. 471 <br>
+                paolasanchez@gmegasur.com.mx
+
+
+
+              </p>
+
+
+              <img src="ORGANIGRAMAS FINALES/ORGANIGRAMA ADMINISTRACIÓN QUINTANA ROO.jpg"
+                class="img-fluid img-thumbnail" onclick="openFullscreen9(this)">
+              <div class="fullscreen-container" id="fullscreencontainer9">
+                <span class="close-btn" onclick="closeFullscreen9()">✖</span>
+                <img id="fullscreenImage9" src="" alt="">
+
+              </div>
+              <script>
+                function openFullscreen9(img) {
+                  let fullscreenImage = document.getElementById("fullscreenImage9");
+                  let fullscreencontainer = document.getElementById("fullscreencontainer9");
+
+                  fullscreenImage.src = img.src;
+                  fullscreencontainer.style.display = "flex";
+                  fullscreencontainer.classList.add("active");
+
+                }
+
+                function closeFullscreen9() {
+
+                  let fullscreencontainer = document.getElementById("fullscreencontainer9");
+                  fullscreencontainer.style.display = "none";
+                  fullscreencontainer.classList.remove("active");
+                }
+              </script>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-------------------------------------------------------------------------------->
+
+    </div>
+
+    <div class="wrapper">
+      <div class="image">
+        <img src="imagenes/Gerente Monedero.png" alt="">
+        <div class="content">
+          <h1>Joel Torres </h1>
+          <p class=""><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop11">
+              Gerente Monedero
+            </button></p>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop11" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-article" id="staticBackdropLabel">Monedero</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-article">
+                <p><b>Objetivo</b> <br>
+                  Administrar la operación del monedero electrónico, supervisando las funciones del supervisor y
+                  auxiliares de crédito y cobranza, con el objetivo de garantizar su óptimo funcionamiento, en
+                  cumplimiento de la normatividad aplicable y asegurando un alto nivel de satisfacción de los clientes.
+                </p>
+                <b>Contacto</b> <br>
+                <p>
+                  L.A.E. Joel Torres Vazquez / Gerente monedero<br>
+                  Tel: 9-20-25-85 Ext. 402<br>
+                  joel.torres@gmegasur.com.mx
+
+
+
+                </p>
+                <img src="ORGANIGRAMAS FINALES/Monedero.jpg" class="img-fluid img-thumbnail"
+                  onclick="openFullscreen10(this)">
+                <div class="fullscreen-container" id="fullscreencontainer10">
+                  <span class="close-btn" onclick="closeFullscreen10()">✖</span>
+                  <img id="fullscreenImage10" src="" alt="">
+
+                </div>
+                <script>
+                  function openFullscreen10(img) {
+                    let fullscreenImage = document.getElementById("fullscreenImage10");
+                    let fullscreencontainer = document.getElementById("fullscreencontainer10");
+
+                    fullscreenImage.src = img.src;
+                    fullscreencontainer.style.display = "flex";
+                    fullscreencontainer.classList.add("active");
+
+                  }
+
+                  function closeFullscreen10() {
+
+                    let fullscreencontainer = document.getElementById("fullscreencontainer10");
+                    fullscreencontainer.style.display = "none";
+                    fullscreencontainer.classList.remove("active");
+                  }
+                </script>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------------------------------------------------------------------------------->
+
+      </div>
+
+      <div class="image">
+        <img src="imagenes/Gerente Sistemas.png" alt="">
+        <div class="content">
+          <h1>Jos&eacute; Borges </h1>
+          <p class=""><button type="button" class="btn btn-warning" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop12">
+              Gerente Sistemas
+            </button></p>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop12" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Sistemas</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-article">
+              <p><b>Objetivo</b> <br>
+                Garantizar la seguridad de la información y la continuidad del servicio con la infraestructura actual en
+                los servidores de las estaciones de servicio y oficinas corporativas. Además, evaluar los avances
+                tecnológicos del sector para optimizar el software y la infraestructura, asegurando una mejora continua
+                que responda a las necesidades de la empresa. </p>
+              <b>Contacto</b> <br>
+              <p>
+                M.G.T.I Jos&eacute; Antonio Borges Estrada / Gerente Sistemas<br>
+                Tel: 9-20-25-85 Ext. 408 <br>
+                joseborges@gmegasur.com.mx
+              </p>
+
+              <img src="ORGANIGRAMAS FINALES/Sistemas.jpg" class="img-fluid img-thumbnail"
+                onclick="openFullscreen11(this)">
+              <div class="fullscreen-container" id="fullscreencontainer11">
+                <span class="close-btn" onclick="closeFullscreen11()">✖</span>
+                <img id="fullscreenImage11" src="" alt="">
+
+              </div>
+              <script>
+                function openFullscreen11(img) {
+                  let fullscreenImage = document.getElementById("fullscreenImage11");
+                  let fullscreencontainer = document.getElementById("fullscreencontainer11");
+
+                  fullscreenImage.src = img.src;
+                  fullscreencontainer.style.display = "flex";
+                  fullscreencontainer.classList.add("active");
+
+                }
+
+                function closeFullscreen11() {
+
+                  let fullscreencontainer = document.getElementById("fullscreencontainer11");
+                  fullscreencontainer.style.display = "none";
+                  fullscreencontainer.classList.remove("active");
+                }
+              </script>
+
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-------------------------------------------------------------------------------->
+
+    </div>
+
+  </div>
+
+  <script>
+    function openFullscreen(img) {
+      let fullscreenImage = document.getElementById("fullscreenImage");
+      let fullscreencontainer = document.getElementById("fullscreencontainer");
+
+      fullscreenImage.src = img.src;
+      fullscreencontainer.style.display = "flex";
+      fullscreencontainer.classList.add("active");
+
+    }
+
+    function closeFullscreen() {
+
+      let fullscreencontainer = document.getElementById("fullscreencontainer");
+      fullscreencontainer.style.display = "none";
+      fullscreencontainer.classList.remove("active");
+    }
+  </script>
+
+  <br> <br>
+  <div class="container-fluid p-0"> <!-- p-0 para eliminar el padding predeterminado -->
+    <div class="row">
+      <div class="col-12">
+        <img src="imagenes/Logos copia.jpg" class="img-fluid w-100" alt="Logos">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid ">
+
+    <footer class="text-center text-lg-start" style="background-color:white ">
+      <div class="container-fluid my-5">
+
+      </div>
+
+  </div>
+
+  <!-- Copyright -->
+
+  <div class="text-center text-white p-3" style="background-color:  #042484;">
+    <p id="Copyright" style="color: white;"></p>
+  </div>
+  <!-- Copyright -->
+  </footer>
+
+
+  <script>
+    const currentYear = new Date().getFullYear();
+    const CopyrightElement = document.querySelector('#Copyright');
+
+    if (CopyrightElement) {
+      CopyrightElement.textContent = `© ${currentYear} Copyright: emme corporativo`;
+    }
+
+  </script>
+
+  </div>
+  <!-- End of .container -->
+
+
+</body>
+
+</html>
+
+<script>
+  var exampleModal = document.getElementById('exampleModal')
+  exampleModal.addEventListener('show.bs.modal', function (event) {
+    // Button that triggered the modal
+    var button = event.relatedTarget
+    // Extract info from data-bs-* attributes
+    var recipient = button.getAttribute('data-bs-whatever')
+    // If necessary, you could initiate an AJAX request here
+    // and then do the updating in a callback.
+    //
+    // Update the modal's content.
+    var modalTitle = exampleModal.querySelector('.modal-title')
+    var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+    modalTitle.textContent = 'New message to ' + recipient
+    modalBodyInput.value = recipient
+  })
+</script>
