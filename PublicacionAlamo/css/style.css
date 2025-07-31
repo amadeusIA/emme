@@ -553,11 +553,32 @@ h6,
     box-shadow: 0 0 0 .25rem rgba(255, 255, 255, 0.25);
 }
 
+.btn-close:focus {
+    box-shadow: 0 0 0 .25rem rgb(255 255 255 / 0%);
+}
+
+.logo_nav {
+    width: 10%;
+}
+
+@media (max-width: 991.98px) {
+    .logo_nav {
+        width: 35%;
+    }
+}
+
+/* @media (min-width: 992px) {
+    .logo_nav {
+        width: 10%;
+    }
+} */
+
 /* custom */
 /*** Custom Title ***/
 .custom-title {
     width: 100%;
 }
+
 .custom-title::before {
     position: absolute;
     content: "";
