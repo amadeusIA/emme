@@ -572,6 +572,9 @@ h6,
     .modal2 .modal-content {
         background-color: #3f4041fa;
     }
+    .carousel-caption{
+        display: block;
+    }
 }
 
 /* Small: 576px - 767px (móviles grandes) */
@@ -585,6 +588,9 @@ h6,
     .modal2 .modal-content {
         background-color: #3f4041fa;
     }
+    .carousel-caption{
+        display: block;
+    }
 }
 
 /* Medium: 768px - 991px (tablets) */
@@ -597,6 +603,9 @@ h6,
     }
     .modal2 .modal-content {
         background-color: #3f4041fa;
+    }
+    .carousel-caption{
+        display: block;
     }
 }
 
