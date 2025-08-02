@@ -1,107 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <title>Ayuda</title>
+    <meta charset="utf-8">
+    <title>Tutoriales</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
+<style>
+    /* Estilos personalizados para el submenú que se abre hacia la derecha */
+    .dropend .dropdown-menu {
+        right: 100%;
+        top: 0;
+        margin-right: 0.125rem;
+    }
+
+    /* Mostrar el submenú derecho al hacer hover */
+    .dropend:hover .dropdown-menu {
+        display: block;
+    }
+</style>
+
 <body>
-    
-    <div class="container-fluid">
-<h2>
-    ¿Cómo solicitar Vacaciones?
-</h2>
-<a href="index.html" class="btn btn-light btn-lg ">Volver a inicio</a>
-<p>Para ayudarte a resolver cualquier duda, hemos creado una serie de video tutoriales detallados. ¡Descúbrelos aquí!</p>
-<div class="row">
-
-<div class="col-lg-3" alig-item-center>
-    <p>¿Cómo ingresar a Conecta a través de la web?</p>
-    <video width="100%" controls="play" src="VIDEOS E INFORMACION CONECTA VACACIONES/VIDEOS/COLABORADOR MEGASUR/Video Cómo ingresar a CONECTA desde Web (1).mp4"></video>
-</div>
-<div class="col-lg-3">
-    <p>¿Cómo ingresar a Conecta a través de la app?</p>
-    <video width="100%" controls="play" src="VIDEOS E INFORMACION CONECTA VACACIONES/VIDEOS/COLABORADOR MEGASUR/Video Cómo ingresar a la App CONECTA (1).mp4"></video>
-</div>
-<div class="col-lg-3">
-    <p>Quiero pedir mis vacaciones por la app, ¿cómo lo hago?</p>
-    <video width="100%" controls="play" src="VIDEOS E INFORMACION CONECTA VACACIONES/VIDEOS/COLABORADOR MEGASUR/Video Cómo pedir vacaciones desde la App CONECTA.mp4"></video>
-</div>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
 
 
-<div class="col-lg-3">
-    <p>Quiero pedir mis vacaciones por la web, ¿cómo lo hago?</p>
-    <video width="100%" controls="play" src="VIDEOS E INFORMACION CONECTA VACACIONES/VIDEOS/COLABORADOR MEGASUR/Video Cómo pedir vacaciones desde la Web CONECTA.mp4"></video>
-</div>
-</div>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Merida, Yucatan</small>
+                    <small class="me-3 text-light">
+                        <i class="fa fa-phone-alt me-2"></i>(999) 920 2585
+                    </small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>ventas@gmegasur.com.mx</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-linkedin-in fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
 
-<div class="row">
 
-<div class="col-lg-3">
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5 px-3 py-3 py-lg-0">
+            <!--<a href="index.html" class="navbar-brand p-0">
+                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>MEGASUR</h1>
+            </a>-->
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="imagenes/emme.png" class="img-fluid logo_nav" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="https://www.google.com/maps/d/u/0/viewer?mid=1Tjwmfe69bpaVB7ilIteE-ifjL6iFkgg&ll=21.020348299999988%2C-89.6353912&z=8"
+                        class="nav-item nav-link active" target="_blank">Estaciones</a>
+                    <!--<li class="nav-item">
+                        <a class="nav-link" href="https://www.google.com/maps/d/u/0/viewer?mid=1Tjwmfe69bpaVB7ilIteE-ifjL6iFkgg&ll=21.020348299999988%2C-89.6353912&z=8">Estaciones</a>
+                    </li>-->
+                    <a href="http://172.16.0.7:8010/glpi/index.php?noAUTO=1" class="nav-item nav-link"
+                        target="_blank">GLPI</a>
+                    <!--<a href="service.html" class="nav-item nav-link">Servicios</a>-->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Conecta</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="https://conecta.concierge.khorplus.com/concierge" class="dropdown-item"
+                                target="_blank">Inicio
+                                conecta</a>
+                            <a href="ayuda.html" class="dropdown-item">Tutoriales</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Sistema de
+                            Gesti&oacute;n</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="http://172.16.0.8/sgc/" class="dropdown-item">SGC</a>
+                            <a href="http://172.16.0.8/sgc/recursos.php" class="dropdown-item">Recursos</a>
+                        </div>
+                    </div>
+                    <!-- <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Recursos
+                            administrativos</a>
 
-    <p>¿Cómo autorizar vacaciones como jefe o gerente?</p>
-    <video controls="play" width="100%" src="VIDEOS E INFORMACION CONECTA VACACIONES/VIDEOS/JEFES INMEDIATOS Y GERENTES/Video Cómo autorizar vacaciones desde la Web CONECTA.mp4"></video>
-</div>
+                        <div class="dropdown-menu m-0">
 
-<div class="col-lg-3">
-    <br>
-    <br>
-    <h3>Infografías</h3>
+                            <a href="feature.html" class="dropdown-item">Our features</a>
+                            <a href="team.html" class="dropdown-item">Team Members</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="quote.html" class="dropdown-item">Free Quote</a>
+                        </div>
+                    </div> -->
 
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            id="dropdownMenuButton">Recursos
+                            administrativos</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <!-- Submenú que se despliega hacia la derecha -->
+                            <li class="dropend">
+                                <a class="dropdown-item dropdown-toggle" href="#" role="button" id="submenu1">Caja de
+                                    ahorro</a>
+                                <ul class="dropdown-menu d-none" id="menudes1">
+                                    <li><a class="dropdown-item" href="informacion/Caja de Ahorro 2025.pdf">Reglamento
+                                            caja
+                                            <br> de ahorro</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="informacion/Formato de inscripción 2025.pdf">Formato
+                                            de <br> inscripción</a></li>
+                                    <li><a class="dropdown-item" href="informacion/Formato préstamo 2025.pdf">Formato de
+                                            <br> Pr&eacute;stamo</a></li>
+                                </ul>
+                            </li>
+                            <!-- Submenú que se despliega hacia la izquierda -->
+                            <li><a class="dropdown-item" href="informacion/SOLICITUD DE PAGO(Formato).xlsx">Formato de
+                                    solicitud de <br> pago</a></li>
+                            <li class="dropend">
+                                <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                    id="submenu2">Vi&aacute;ticos</a>
+                                <ul class="dropdown-menu d-none" id="menudes2">
+                                    <li><a class="dropdown-item" href="informacion/Viáticos 2025.pdf">Politica de
+                                            vi&aacute;ticos</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="informacion/VIATICOS Solicitud de efectivo.xls">Formato de solicitud
+                                            <br>
+                                            de vi&aacute;ticos</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li><a class="dropdown-item" href="http://172.16.0.8/ensi/login.php">UEN'S y UEA'S</a></li>
+                            <li><a class="dropdown-item"
+                                    href="http://172.16.0.7:3000/public/dashboard/9a92c796-7631-491e-a4d6-b04cfaeaca6f?departamento=&estacion=yucatan">Extensiones</a>
+                            </li>
+                            <li class="dropend">
+                                <a class="dropdown-item dropdown-toggle" href="#" role="button" id="submenu3">Beneficios
+                                    del
+                                    colaborador</a>
+                                <ul class="dropdown-menu d-none" id="menudes3">
+                                    <li><a class="dropdown-item"
+                                            href="informacion/1 Beneficios Megasur copia-fusionado.pdf">Centro
+                                            M&eacute;dico
+                                            peninsular</a></li>
+                                    <li><a class="dropdown-item" href="imagenes/O0g9t6UQPUt3lXJx.png">Beneficios
+                                            Megacardclub</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="imagenes/imagenes institucionales.rar">Logos
+                                    institucionales</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="index.html#contacto" class="nav-item nav-link">Contacto</a>
+
+                </div>
+
+
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">¿Cómo solicitar Vacaciones?</h1>
+                    <div class="h5 text-white">Para ayudarte a resolver cualquier duda, hemos creado una serie
+                        <br> de video tutoriales detallados. ¡Descúbrelos aquí!</div>
+                        <a href="index.html" class="h5 text-white">Inicio</a>
+                    
+                    <!-- <i class="far fa-circle text-white px-2"></i> -->
+                    <!-- <a href="" class="h5 text-white">Services</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3"
+                            placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 pt-0">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <!-- <h5 class="fw-bold text-primary text-uppercase">Our Services</h5> -->
+                <h1 class="mb-0">Tutoriales</h1>
+            </div>
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="mb-3">¿Cómo ingresar a Conecta a través de la web?</h4>
+                        <video class="p-2 pb-4" width="100%" controls="play" src="VIDEOS_INFORMACION_CONECTA_VACACIONES/VIDEOS/COLABORADOR MEGASUR/Video Cómo ingresar a CONECTA desde Web (1).mp4"></video>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="mb-3">¿Cómo ingresar a Conecta a través de la app?</h4>
+                        <video class="p-2 pb-4" width="100%" controls="play" src="VIDEOS_INFORMACION_CONECTA_VACACIONES/VIDEOS/COLABORADOR MEGASUR/Video Cómo ingresar a la App CONECTA (1).mp4"></video>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="mb-3">Quiero pedir mis vacaciones por la app, ¿cómo lo hago?</h4>
+                        <video class="p-2 pb-4" width="100%" controls="play" src="VIDEOS_INFORMACION_CONECTA_VACACIONES/VIDEOS/COLABORADOR MEGASUR/Video Cómo pedir vacaciones desde la App CONECTA.mp4"></video>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="mb-3">Quiero pedir mis vacaciones por la web, ¿cómo lo hago?</h4>
+                        <video class="p-2 pb-4" width="100%" controls="play" src="VIDEOS_INFORMACION_CONECTA_VACACIONES/VIDEOS/COLABORADOR MEGASUR/Video Cómo pedir vacaciones desde la Web CONECTA.mp4"></video>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="mb-3">¿Cómo autorizar vacaciones como jefe o gerente?</h4>
+                        <video class="p-2 pb-4" width="100%" controls="play" src="VIDEOS_INFORMACION_CONECTA_VACACIONES/VIDEOS/JEFES INMEDIATOS Y GERENTES/Video Cómo autorizar vacaciones desde la Web CONECTA.mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 pt-0">
+            <div class="row">
+
+                <div class="col-12 col-lg-6">
+                    <div class="section-title position-relative pb-3">
+                        <h1 class="mb-0">Infografías</h1>
+                    </div>
+                    <div class="link-animated d-flex flex-column justify-content-start my-3">
+                        <a class="mb-3" href="VIDEOS_INFORMACION_CONECTA_VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía ¿Como solicitar vacaciones web.pdf" style="color: #6B6A75;" target="_blank"><i
+                                class="fa fa-check text-primary me-3"></i>Quiero pedir mis vacaciones por la web, ¿cómo lo hago?</a>
+                        <a class="mb-3" href="VIDEOS_INFORMACION_CONECTA_VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía cambio contraseña y cerrar sesión Web.pdf" style="color: #6B6A75;" target="_blank"><i
+                                class="fa fa-check text-primary me-3"></i>Cambio de contraseña y cierre de sesión</a>
+                        <a class="mb-3" href="VIDEOS_INFORMACION_CONECTA_VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía Cerrar sesion, perfil y datos App Conecta.pdf" style="color: #6B6A75;" target="_blank"><i
+                                class="fa fa-check text-primary me-3"></i>Cierre de sesión y de perfil en Conecta</a>
+                        <a class="mb-3" href="VIDEOS_INFORMACION_CONECTA_VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografia Como cancelar vacaciones web.pdf" style="color: #6B6A75;" target="_blank"><i
+                                class="fa fa-check text-primary me-3"></i>¿Cómo cancelar una solicitud de vacaciones en línea?</a>
+                        <a class="mb-3" href="VIDEOS_INFORMACION_CONECTA_VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía Cómo ingresar a la App Conecta.pdf" style="color: #6B6A75;" target="_blank"><i
+                                class="fa fa-check text-primary me-3"></i>¿Cómo ingresar a Conecta a través de la app?</a>
+                        <a class="mb-3" href="VIDEOS_INFORMACION_CONECTA_VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía Cómo soliictar vacaciones desde la App Conecta.pdf" style="color: #6B6A75;" target="_blank"><i
+                                class="fa fa-check text-primary me-3"></i>Quiero pedir mis vacaciones por la app, ¿cómo lo hago?</a>
+                        <a class="mb-3" href="VIDEOS_INFORMACION_CONECTA_VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía editar perfil desde Web.pdf" style="color: #6B6A75;" target="_blank"><i
+                                class="fa fa-check text-primary me-3"></i>Editar perfil a través de la página web</a>
+                        <a class="mb-3" href="VIDEOS_INFORMACION_CONECTA_VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía Ingresar a Conecta desde Web.pdf" style="color: #6B6A75;" target="_blank"><i
+                                class="fa fa-check text-primary me-3"></i>¿Cómo ingresar a Conecta a través de la web?</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+
+                    <div class="section-title position-relative pb-3">
+                        <h1 class="mb-0">Infografias Jefes/Gerentes</h1>
+                    </div>
+                    <div class="link-animated d-flex flex-column justify-content-start my-3">
+                        <a class="mb-3" href="VIDEOS_INFORMACION_CONECTA_VACACIONES/INFOGRAFIAS/JEFES INMEDIATOS Y GERENTES/Infografía ¿Como autorizar o denegar vacaciones web.pdf" style="color: #6B6A75;" target="_blank"><i
+                                class="fa fa-check text-primary me-3"></i>¿Como autorizar vacaciones desde la web</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Vendor Start -->
     <style>
-        li a{
-            text-decoration: none;
-            color: black;
+        #empresas .owl-stage {
+            display: flex;
+            align-items: center;
         }
-
-
     </style>
-    <ul>
-        <li><a href="VIDEOS E INFORMACION CONECTA VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía ¿Como solicitar vacaciones web.pdf" target="_blank">Quiero pedir mis vacaciones por la web, ¿cómo lo hago?</a></li>
-        <li><a href="VIDEOS E INFORMACION CONECTA VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía cambio contraseña y cerrar sesión Web.pdf" target="_blank">Cambio de contraseña y cierre de sesión</a></li>
-        <li><a href="VIDEOS E INFORMACION CONECTA VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía Cerrar sesion, perfil y datos App Conecta.pdf" target="_blank">Cierre de sesión y de perfil en Conecta</a></li>
-        <li><a href="VIDEOS E INFORMACION CONECTA VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografia Como cancelar vacaciones web.pdf" target="_blank" >¿Cómo cancelar una solicitud de vacaciones en línea?</a></li>
-        <li><a href="VIDEOS E INFORMACION CONECTA VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía Cómo ingresar a la App Conecta.pdf" target="_blank" >¿Cómo ingresar a Conecta a través de la app?</a></li>
-        <li><a href="VIDEOS E INFORMACION CONECTA VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía Cómo soliictar vacaciones desde la App Conecta.pdf" target="_blank">Quiero pedir mis vacaciones por la app, ¿cómo lo hago?</a></li>
-        <li><a href="VIDEOS E INFORMACION CONECTA VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía editar perfil desde Web.pdf"target="_blank">Editar perfil a través de la página web</a></li>
-        <li><a href="VIDEOS E INFORMACION CONECTA VACACIONES/INFOGRAFIAS/COLABORADOR MEGASUR/Infografía Ingresar a Conecta desde Web.pdf"target="_blank">¿Cómo ingresar a Conecta a través de la web?</a></li>
-    </ul>
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5 mb-5">
+            <div class="bg-white">
+                <div class="owl-carousel vendor-carousel" id="empresas">
+                    <img src="img/empresas/1 (1).png" alt="">
+                    <img src="img/empresas/1 (2).png" alt="">
+                    <img src="img/empresas/1 (3).png" alt="">
+                    <img src="img/empresas/1 (4).png" alt="">
+                    <img src="img/empresas/1 (5).png" alt="">
+                    <img src="img/empresas/1 (6).png" alt="">
+                    <img src="img/empresas/7.png" alt="">
+                    <img src="img/empresas/8.png" alt="">
+                    <img src="img/empresas/1 (9).png" alt="">
+                    <img src="img/empresas/1 (10).png" alt="">
+                    <img src="img/empresas/1 (11).png" alt="">
+                    <img src="img/empresas/1 (12).png" alt="">
+                    <img src="img/empresas/1 (13).png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="d-flex flex-column align-items-center justify-content-center text-center bg-white h-100 p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <!-- <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Startup</h1> -->
+                            <img src="imagenes/emme.png" class="img-fluid" width="75%" alt="">
+                        </a>
+                        <p class="mt-3 mb-4 d-none">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet
+                            eos
+                            sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet
+                            et kasd eos duo.</p>
+                        <!-- <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                <button class="btn btn-dark">Sign Up</button>
+                            </div>
+                        </form> -->
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Contáctanos</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Merida, Yucatan</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">ventas@gmegasur.com.mx</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">(999) 920 2585</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-primary btn-square me-2" href="#"><i
+                                        class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i
+                                        class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i
+                                        class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="#"><i
+                                        class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Contenido rápido</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="index.html#"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Inicio</a>
+                                <a class="text-light mb-2"  href="index.html#Sobre_nosotros"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Sobre nosotros</a>
+                                <a class="text-light mb-2"  href="index.html#Nuestros_Valores"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Nuestros Valores</a>
+                                <a class="text-light mb-2"  href="index.html#Política_Calidad"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Política de Calidad</a>
+                                <a class="text-light mb-2"  href="index.html#gasolinera_sueños"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>La gasolinera de los sueños</a>
+                                <a class="text-light"  href="index.html#Comité_Calidad"><i class="bi bi-arrow-right text-primary me-2"></i>Comité
+                                    de Calidad</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Enlaces populares</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="ayuda.html"><i class="bi bi-arrow-right text-primary me-2"></i>Tutoriales</a>
+                                <a class="text-light mb-2" href="https://conecta.concierge.khorplus.com/concierge"><i class="bi bi-arrow-right text-primary me-2"></i>Inicio conecta</a>
+                                <a class="text-light mb-2" href="informacion/1 Beneficios Megasur copia-fusionado.pdf"><i class="bi bi-arrow-right text-primary me-2"></i>Centro
+                                            M&eacute;dico peninsular</a>
+                                <a class="text-light mb-2" href="http://172.16.0.8/sgc/"><i class="bi bi-arrow-right text-primary me-2"></i>SGC</a>
+                                <a class="text-light mb-2" href="http://172.16.0.8/sgc/recursos.php"><i class="bi bi-arrow-right text-primary me-2"></i>Recursos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">
+                            &copy; <span class="text-white border-bottom">2025 Copyright: emme corporativo</span>.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            <!-- Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">Codex</a> -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-</div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-<div class="col-lg-3">
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <!-- sub dropdown  -->
+    <script>
+        $(document).ready(function () {
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-    <br>
-    <br>
-    <h3>Infografias Jefes/Gerentes</h3>
+            function hideAllSubmenus() {
+                $('[id^="menudes"]').addClass('d-none');
+            }
 
-    <style>
-        li a{
-            text-decoration: none;
-            color: black;
-        }
+            $('[id^="submenu"]').each(function () {
+                const $trigger = $(this);
+                const menuId = $trigger.attr('id').replace('submenu', 'menudes');
+                const $submenu = $('#' + menuId);
 
+                if (isTouchDevice) {
+                    // Móvil: mostrar/ocultar con clic
+                    $trigger.on('click', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation(); // Previene que se cierre el menú principal
 
-    </style>
-    <ul>
-        <li><a href="VIDEOS E INFORMACION CONECTA VACACIONES/INFOGRAFIAS/JEFES INMEDIATOS Y GERENTES/Infografía ¿Como autorizar o denegar vacaciones web.pdf" target="_blank">¿Como autorizar vacaciones desde la web</a></li>
-        
-    </ul>
+                        // Cierra otros submenús
+                        hideAllSubmenus();
 
+                        // Alterna el actual
+                        $submenu.toggleClass('d-none');
+                    });
 
+                    // Oculta submenús al hacer clic fuera
+                    $(document).on('click touchstart', function (e) {
+                        if (!$trigger.is(e.target) && $trigger.has(e.target).length === 0 &&
+                            !$submenu.is(e.target) && $submenu.has(e.target).length === 0) {
+                            $submenu.addClass('d-none');
+                        }
+                    });
 
-
-</div>
-
-
-
-</div>
-
-
-
-
+                } else {
+                    // Escritorio: mostrar con hover
+                    $trigger.parent().on('mouseenter', function () {
+                        $submenu.removeClass('d-none');
+                    }).on('mouseleave', function () {
+                        $submenu.addClass('d-none');
+                    });
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

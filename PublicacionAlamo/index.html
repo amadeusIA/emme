@@ -92,23 +92,27 @@
             <!--<a href="index.html" class="navbar-brand p-0">
                 <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>MEGASUR</h1>
             </a>-->
-            <img src="imagenes/emme.png" class="img-fluid logo_nav" alt="">
+            <a href="index.html" class="navbar-brand p-0">
+                <img src="imagenes/emme.png" class="img-fluid logo_nav" alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="https://www.google.com/maps/d/u/0/viewer?mid=1Tjwmfe69bpaVB7ilIteE-ifjL6iFkgg&ll=21.020348299999988%2C-89.6353912&z=8"
-                        class="nav-item nav-link active">Estaciones</a>
+                        class="nav-item nav-link active" target="_blank">Estaciones</a>
                     <!--<li class="nav-item">
                         <a class="nav-link" href="https://www.google.com/maps/d/u/0/viewer?mid=1Tjwmfe69bpaVB7ilIteE-ifjL6iFkgg&ll=21.020348299999988%2C-89.6353912&z=8">Estaciones</a>
                     </li>-->
-                    <a href="http://172.16.0.7:8010/glpi/index.php?noAUTO=1" class="nav-item nav-link">GLPI</a>
+                    <a href="http://172.16.0.7:8010/glpi/index.php?noAUTO=1" class="nav-item nav-link"
+                        target="_blank">GLPI</a>
                     <!--<a href="service.html" class="nav-item nav-link">Servicios</a>-->
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Conecta</a>
                         <div class="dropdown-menu m-0">
-                            <a href="https://conecta.concierge.khorplus.com/concierge" class="dropdown-item">Inicio
+                            <a href="https://conecta.concierge.khorplus.com/concierge" class="dropdown-item"
+                                target="_blank">Inicio
                                 conecta</a>
                             <a href="ayuda.html" class="dropdown-item">Tutoriales</a>
                         </div>
@@ -121,7 +125,7 @@
                             <a href="http://172.16.0.8/sgc/recursos.php" class="dropdown-item">Recursos</a>
                         </div>
                     </div>
-                    <div class="nav-item dropdown">
+                    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Recursos
                             administrativos</a>
 
@@ -132,8 +136,7 @@
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                             <a href="quote.html" class="dropdown-item">Free Quote</a>
                         </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                    </div> -->
 
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -193,6 +196,9 @@
                                     institucionales</a></li>
                         </ul>
                     </div>
+
+                    <a href="index.html#contacto" class="nav-item nav-link">Contacto</a>
+
                 </div>
 
 
@@ -290,6 +296,7 @@
     </div>
     <!-- Facts Start -->
     <!-- About Start -->
+    <section id="Sobre_nosotros">
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -343,8 +350,10 @@
             </div>
         </div>
     </div>
+    </section>
     <!-- About End -->
     <!-- Vendor Start -->
+    <section id="Nuestros_Valores">
     <style>
         .centrado-f {
             display: flex;
@@ -417,9 +426,11 @@
             </div>
         </div>
     </div>
+    </section>
     <!-- Vendor End -->
 
     <!-- politica de calidad -->
+    <section id="Política_Calidad">
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -472,9 +483,11 @@
             </div>
         </div>
     </div>
+    </section>
     <!-- politica de calidad End -->
 
     <!-- gasolinera de los sueños -->
+    <section id="gasolinera_sueños">
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -498,7 +511,7 @@
                         sistema de gestión de la calidad se basaba en la norma ISO 9001:2015.
                     </p>
                     <a class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft" type="button"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">Ver mas
+                        data-bs-toggle="modal" data-bs-target="#exampleModax">Ver mas
                         ...</a>
                 </div>
 
@@ -512,10 +525,11 @@
             </div>
         </div>
     </div>
+    </section>
     <!-- Button trigger modal -->
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModax" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
 
@@ -553,6 +567,7 @@
     <!-- gasolinera de los sueños End -->
 
     <!-- Features Start -->
+     <section id="Comité_Calidad">
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
@@ -620,77 +635,80 @@
             </div>
         </div>
     </div>
+    </section>
     <!-- Features Start -->
 
     <!-- Quote Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">Solicitar una cotización</h5>
-                        <h1 class="mb-0">¿Necesita un presupuesto gratuito? Contáctenos.</h1>
-                    </div>
-                    <div class="row gx-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Responder en 24 horas</h5>
+    <section id="contacto">
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-7">
+                        <div class="section-title position-relative pb-3 mb-5">
+                            <h5 class="fw-bold text-primary text-uppercase">Solicitar una cotización</h5>
+                            <h1 class="mb-0">¿Necesita un presupuesto gratuito? Contáctenos.</h1>
                         </div>
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>Soporte telefónico las 24
-                                horas</h5>
-                        </div>
-                    </div>
-                    <p class="mb-4">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et
-                        dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea
-                        et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore
-                        sanctus sed et. Takimata takimata sanctus sed.</p>
-                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded"
-                            style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="mb-2">Llama para hacer cualquier consulta</h5>
-                            <h4 class="text-primary mb-0">(999) 920 2585</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn"
-                        data-wow-delay="0.9s">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Su nombre"
-                                        style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0"
-                                        placeholder="Su correo electrónico" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Seleccione un servicio</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="3"
-                                        placeholder="Mensaje"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-dark w-100 py-3" type="submit">Solicitar una
-                                        cotización</button>
-                                </div>
+                        <div class="row gx-3">
+                            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                                <h5 class="mb-4"><i class="fa fa-reply text-primary me-3"></i>Responder en 24 horas</h5>
                             </div>
-                        </form>
+                            <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                                <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>Soporte telefónico las 24
+                                    horas</h5>
+                            </div>
+                        </div>
+                        <p class="mb-4">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et
+                            dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea
+                            et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore
+                            sanctus sed et. Takimata takimata sanctus sed.</p>
+                        <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-phone-alt text-white"></i>
+                            </div>
+                            <div class="ps-4">
+                                <h5 class="mb-2">Llama para hacer cualquier consulta</h5>
+                                <h4 class="text-primary mb-0">(999) 920 2585</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn"
+                            data-wow-delay="0.9s">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-xl-12">
+                                        <input type="text" class="form-control bg-light border-0" placeholder="Su nombre"
+                                            style="height: 55px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="email" class="form-control bg-light border-0"
+                                            placeholder="Su correo electrónico" style="height: 55px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <select class="form-select bg-light border-0" style="height: 55px;">
+                                            <option selected>Seleccione un servicio</option>
+                                            <option value="1">Service 1</option>
+                                            <option value="2">Service 2</option>
+                                            <option value="3">Service 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control bg-light border-0" rows="3"
+                                            placeholder="Mensaje"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-dark w-100 py-3" type="submit">Solicitar una
+                                            cotización</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Quote End -->
     <!-- Testimonial Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -778,7 +796,7 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Mario Medina</h4>
-                            <p class="text-uppercase m-0">Director Administrativo</p>
+                            <p class="text-uppercase m-0">Director Administrativo <br> <br></p>
                         </div>
                     </div>
                 </div>
@@ -794,7 +812,7 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Rodrigo Medina</h4>
-                            <p class="text-uppercase m-0">Director Operativo</p>
+                            <p class="text-uppercase m-0">Director Operativo <br> <br></p>
                         </div>
                     </div>
                 </div>
@@ -813,13 +831,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Josué Jimenez</h4>
-                            <p class="text-uppercase m-0">Gerente Operaciones</p>
+                            <p class="text-uppercase m-0">Gerente Operaciones <br> <br></p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -860,10 +878,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Operaciones.jpg" alt="">
@@ -885,13 +903,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Octavio Soto</h4>
-                            <p class="text-uppercase m-0">Gerente Mercadotecnia</p>
+                            <p class="text-uppercase m-0">Gerente Mercadotecnia <br> <br></p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -936,10 +954,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Mercadotecnia.jpg" alt="">
@@ -961,13 +979,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Eric Ruiz</h4>
-                            <p class="text-uppercase m-0">Gerente Contabilidad</p>
+                            <p class="text-uppercase m-0">Gerente Contabilidad <br> <br></p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -1013,10 +1031,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Operaciones.jpg" alt="">
@@ -1038,13 +1056,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Antonio Lizárraga</h4>
-                            <p class="text-uppercase m-0">Gerente Comercial</p>
+                            <p class="text-uppercase m-0">Gerente Comercial <br> <br></p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -1096,10 +1114,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Comercial.jpg" alt="">
@@ -1121,13 +1139,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Pamela Benítez</h4>
-                            <p class="text-uppercase m-0">Gerente de Calidad y Mejora Continua</p>
+                            <p class="text-uppercase m-0">Gerente de Calidad y <br> Mejora Continua</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -1175,10 +1193,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Calidad.jpg" alt="">
@@ -1200,13 +1218,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Álvaro Flores</h4>
-                            <p class="text-uppercase m-0">Gerente Contraloria</p>
+                            <p class="text-uppercase m-0">Gerente Contraloria <br> <br></p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -1249,10 +1267,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Contraloria.jpg" alt="">
@@ -1274,13 +1292,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Gustavo Cetina</h4>
-                            <p class="text-uppercase m-0">Gerente Recursos Humanos</p>
+                            <p class="text-uppercase m-0">Gerente Recursos <br> Humanos</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -1325,10 +1343,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Recursos_Humanos.jpg" alt="">
@@ -1350,13 +1368,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Jacel Salinas</h4>
-                            <p class="text-uppercase m-0">Gerente Desarrollo Organizacional</p>
+                            <p class="text-uppercase m-0">Gerente Desarrollo <br> Organizacional</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -1392,7 +1410,8 @@
 
                                     <div class="col-12 col-lg-6">
                                         <a type="button" data-bs-toggle="modal" data-bs-target="#imgModal8">
-                                            <img src="img/organigramas/Desarrollo_Organizacional.jpg" class="img-fluid" alt="">
+                                            <img src="img/organigramas/Desarrollo_Organizacional.jpg" class="img-fluid"
+                                                alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -1402,10 +1421,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Desarrollo_Organizacional.jpg" alt="">
@@ -1427,13 +1446,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Rosario Garces</h4>
-                            <p class="text-uppercase m-0">Gerente de Administración</p>
+                            <p class="text-uppercase m-0">Gerente de Administración <br> <br></p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -1450,9 +1469,12 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="p-2" style="text-align: justify;">
                                             <h5 class="fw-bold text-primary text-uppercase">Objetivo</h5>
-                                            Vigilar y coordinar que la administración de los recursos financieros se ejerza de acuerdo a las
-                                            políticas de la empresa, controlando y supervisando las áreas relacionadas con la administración
-                                            financiera de la empresa, para hacer más eficiente el aprovechamiento de los recursos financieros.
+                                            Vigilar y coordinar que la administración de los recursos financieros se
+                                            ejerza de acuerdo a las
+                                            políticas de la empresa, controlando y supervisando las áreas relacionadas
+                                            con la administración
+                                            financiera de la empresa, para hacer más eficiente el aprovechamiento de los
+                                            recursos financieros.
                                         </div>
                                         <div class="p-2" style="text-align: justify;">
                                             <h5 class="fw-bold text-primary text-uppercase">contacto</h5>
@@ -1474,10 +1496,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Administracion.jpg" alt="">
@@ -1499,13 +1521,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Paola Sánchez</h4>
-                            <p class="text-uppercase m-0">Gerente de Administración Quintana Roo</p>
+                            <p class="text-uppercase m-0">Gerente de Administración <br> Quintana Roo</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -1522,9 +1544,12 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="p-2" style="text-align: justify;">
                                             <h5 class="fw-bold text-primary text-uppercase">Objetivo</h5>
-                                            Vigilar y coordinar que la administración de los recursos financieros se ejerza de acuerdo a las
-                                            políticas de la empresa, controlando y supervisando las áreas relacionadas con la administración
-                                            financiera de la empresa, para hacer más eficiente el aprovechamiento de los recursos financieros.
+                                            Vigilar y coordinar que la administración de los recursos financieros se
+                                            ejerza de acuerdo a las
+                                            políticas de la empresa, controlando y supervisando las áreas relacionadas
+                                            con la administración
+                                            financiera de la empresa, para hacer más eficiente el aprovechamiento de los
+                                            recursos financieros.
                                         </div>
                                         <div class="p-2" style="text-align: justify;">
                                             <h5 class="fw-bold text-primary text-uppercase">contacto</h5>
@@ -1536,7 +1561,8 @@
 
                                     <div class="col-12 col-lg-6">
                                         <a type="button" data-bs-toggle="modal" data-bs-target="#imgModal10">
-                                            <img src="img/organigramas/Administracion_quintana_roo.jpg" class="img-fluid" alt="">
+                                            <img src="img/organigramas/Administracion_quintana_roo.jpg"
+                                                class="img-fluid" alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -1546,10 +1572,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Administracion_quintana_roo.jpg" alt="">
@@ -1571,13 +1597,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Joel Torres</h4>
-                            <p class="text-uppercase m-0">Gerente Monedero</p>
+                            <p class="text-uppercase m-0">Gerente Monedero <br> <br></p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -1594,9 +1620,12 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="p-2" style="text-align: justify;">
                                             <h5 class="fw-bold text-primary text-uppercase">Objetivo</h5>
-                                            Administrar la operación del monedero electrónico, supervisando las funciones del supervisor y
-                                            auxiliares de crédito y cobranza, con el objetivo de garantizar su óptimo funcionamiento, en
-                                            cumplimiento de la normatividad aplicable y asegurando un alto nivel de satisfacción de los clientes.
+                                            Administrar la operación del monedero electrónico, supervisando las
+                                            funciones del supervisor y
+                                            auxiliares de crédito y cobranza, con el objetivo de garantizar su óptimo
+                                            funcionamiento, en
+                                            cumplimiento de la normatividad aplicable y asegurando un alto nivel de
+                                            satisfacción de los clientes.
                                         </div>
                                         <div class="p-2" style="text-align: justify;">
                                             <h5 class="fw-bold text-primary text-uppercase">contacto</h5>
@@ -1618,10 +1647,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal11" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal11" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Monedero.jpg" alt="">
@@ -1630,7 +1659,7 @@
                 </div>
                 <!-- target End 11 -->
 
-                <!-- target 11 -->
+                <!-- target 12 -->
                 <div class="col-lg-3 col-md-4 col-6 wow slideInUp" data-wow-delay="0.9s">
                     <div class="team-item bg-light rounded overflow-hidden">
                         <div class="team-img position-relative overflow-hidden">
@@ -1643,13 +1672,13 @@
                         </div>
                         <div class="text-center py-4">
                             <h4 class="text-primary">Jos&eacute; Borges</h4>
-                            <p class="text-uppercase m-0">Gerente Sistemas</p>
+                            <p class="text-uppercase m-0">Gerente Sistemas <br> <br></p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal 1 -->
-                <div class="modal fade m-auto" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                         <div class="modal-content">
@@ -1666,9 +1695,12 @@
                                     <div class="col-12 col-lg-6">
                                         <div class="p-2" style="text-align: justify;">
                                             <h5 class="fw-bold text-primary text-uppercase">Objetivo</h5>
-                                            Garantizar la seguridad de la información y la continuidad del servicio con la infraestructura actual en
-                                            los servidores de las estaciones de servicio y oficinas corporativas. Además, evaluar los avances
-                                            tecnológicos del sector para optimizar el software y la infraestructura, asegurando una mejora continua
+                                            Garantizar la seguridad de la información y la continuidad del servicio con
+                                            la infraestructura actual en
+                                            los servidores de las estaciones de servicio y oficinas corporativas.
+                                            Además, evaluar los avances
+                                            tecnológicos del sector para optimizar el software y la infraestructura,
+                                            asegurando una mejora continua
                                             que responda a las necesidades de la empresa.
                                         </div>
                                         <div class="p-2" style="text-align: justify;">
@@ -1691,10 +1723,10 @@
                     </div>
                 </div>
                 <!-- modal 2 -->
-                <div class="modal fade m-auto" id="imgModal12" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade m-auto p-0" id="imgModal12" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
-                        <div class="modal-content">
+                    <div class="modal2 modal-dialog modal-fullscreen-sm-down modal-dialog-centered modal-xl">
+                        <div class="modal-content justify-content-center">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                                 style="position: absolute; right: 10px; top: 10px;"></button>
                             <img src="img/organigramas/Sistemas.jpg" alt="">
@@ -1715,7 +1747,7 @@
                 <h1 class="mb-0">Lea los últimos artículos de nuestro blog</h1>
             </div>
             <div class="row g-5">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.3s">
                     <div class="blog-item bg-light rounded overflow-hidden">
                         <div class="blog-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/blog-1.jpg" alt="">
@@ -1733,7 +1765,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.6s">
                     <div class="blog-item bg-light rounded overflow-hidden">
                         <div class="blog-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/blog-2.jpg" alt="">
@@ -1751,7 +1783,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.9s">
                     <div class="blog-item bg-light rounded overflow-hidden">
                         <div class="blog-img position-relative overflow-hidden">
                             <img class="img-fluid" src="img/blog-3.jpg" alt="">
@@ -1859,17 +1891,17 @@
                                 <h3 class="text-light mb-0">Contenido rápido</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i
+                                <a class="text-light mb-2" href="index.html#"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Inicio</a>
-                                <a class="text-light mb-2" href="#"><i
+                                <a class="text-light mb-2"  href="index.html#Sobre_nosotros"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Sobre nosotros</a>
-                                <a class="text-light mb-2" href="#"><i
+                                <a class="text-light mb-2"  href="index.html#Nuestros_Valores"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Nuestros Valores</a>
-                                <a class="text-light mb-2" href="#"><i
+                                <a class="text-light mb-2"  href="index.html#Política_Calidad"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>Política de Calidad</a>
-                                <a class="text-light mb-2" href="#"><i
+                                <a class="text-light mb-2"  href="index.html#gasolinera_sueños"><i
                                         class="bi bi-arrow-right text-primary me-2"></i>La gasolinera de los sueños</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Comité
+                                <a class="text-light"  href="index.html#Comité_Calidad"><i class="bi bi-arrow-right text-primary me-2"></i>Comité
                                     de Calidad</a>
                             </div>
                         </div>
@@ -1878,18 +1910,12 @@
                                 <h3 class="text-light mb-0">Enlaces populares</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Inicio</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Sobre nosotros</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                                <a class="text-light" href="#"><i
-                                        class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                                <a class="text-light mb-2" href="ayuda.html"><i class="bi bi-arrow-right text-primary me-2"></i>Tutoriales</a>
+                                <a class="text-light mb-2" href="https://conecta.concierge.khorplus.com/concierge"><i class="bi bi-arrow-right text-primary me-2"></i>Inicio conecta</a>
+                                <a class="text-light mb-2" href="informacion/1 Beneficios Megasur copia-fusionado.pdf"><i class="bi bi-arrow-right text-primary me-2"></i>Centro
+                                            M&eacute;dico peninsular</a>
+                                <a class="text-light mb-2" href="http://172.16.0.8/sgc/"><i class="bi bi-arrow-right text-primary me-2"></i>SGC</a>
+                                <a class="text-light mb-2" href="http://172.16.0.8/sgc/recursos.php"><i class="bi bi-arrow-right text-primary me-2"></i>Recursos</a>
                             </div>
                         </div>
                     </div>
@@ -1903,11 +1929,10 @@
                 <div class="col-12">
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
                         <p class="mb-0">
-                            &copy; <span class="text-white border-bottom">2025 Copyright: emme corporativo</span>. All
-                            Rights Reserved.
+                            &copy; <span class="text-white border-bottom">2025 Copyright: emme corporativo</span>.
 
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">Codex</a>
+                            <!-- Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">Codex</a> -->
                         </p>
                     </div>
                 </div>

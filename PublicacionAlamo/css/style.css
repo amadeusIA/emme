@@ -350,8 +350,8 @@ h6,
 /*** Service ***/
 .service-item {
     position: relative;
-    height: 300px;
-    padding: 0 30px;
+    height: auto;
+    padding: 30px 30px;
     transition: .5s;
 }
 
@@ -558,14 +558,75 @@ h6,
 }
 
 .logo_nav {
-    width: 10%;
+    width: 20%;
 }
 
-@media (max-width: 991.98px) {
+/* Extra small: 0 - 575px (móviles pequeños) */
+@media (min-width: 0px) and (max-width: 575.98px) {
+    .logo_nav {
+        width: 33%;
+    }
+    .navbar-dark .navbar-brand {
+        display: contents;
+    }
+    .modal2 .modal-content {
+        background-color: #3f4041fa;
+    }
+}
+
+/* Small: 576px - 767px (móviles grandes) */
+@media (min-width: 576px) and (max-width: 767.98px) {
     .logo_nav {
         width: 35%;
     }
+    .navbar-dark .navbar-brand {
+        display: contents;
+    }
+    .modal2 .modal-content {
+        background-color: #3f4041fa;
+    }
 }
+
+/* Medium: 768px - 991px (tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .logo_nav {
+        width: 22%;
+    }
+    .navbar-dark .navbar-brand {
+        display: contents;
+    }
+    .modal2 .modal-content {
+        background-color: #3f4041fa;
+    }
+}
+
+/* Large: 992px - 1199px (laptops estándar) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .logo_nav {
+        width: 30%;
+    }
+}
+
+/* Extra Large: 1200px - 1399px (laptops grandes) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .logo_nav {
+        width: 25%;
+    }
+}
+
+/* XXL y superior: 1400px en adelante (pantallas grandes/4K) */
+@media (min-width: 1400px) and (max-width: 1899.98px) {
+    .logo_nav {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1900px) {
+    .logo_nav {
+        width: 20%;
+    }
+}
+
 
 /* @media (min-width: 992px) {
     .logo_nav {
