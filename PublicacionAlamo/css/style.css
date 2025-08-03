@@ -573,7 +573,10 @@ h6,
         background-color: #3f4041fa;
     }
     .carousel-caption{
-        display: block;
+        display: block !important;
+    }
+    .banner-inicial{
+        height: 40vh;
     }
 }
 
@@ -589,7 +592,10 @@ h6,
         background-color: #3f4041fa;
     }
     .carousel-caption{
-        display: block;
+        display: block !important;
+    }
+    .banner-inicial{
+        height: 40vh;
     }
 }
 
@@ -605,7 +611,10 @@ h6,
         background-color: #3f4041fa;
     }
     .carousel-caption{
-        display: block;
+        display: block !important;
+    }
+    .banner-inicial{
+        height: 40vh;
     }
 }
 
